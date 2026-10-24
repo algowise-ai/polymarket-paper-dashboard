@@ -1,0 +1,27 @@
+{
+  "generated_hkt": "2026-10-23 06:03:21",
+  "mode": "day",
+  "day": "20261023",
+  "axes": {
+    "outer_cols": "CRYPTO",
+    "outer_rows": "TIME_WINDOW",
+    "inner_x": "HKT_hour_0_23",
+    "inner_y": "limit_px_80_95c",
+    "metric": "realized_pnl_usd"
+  },
+  "n_files": 245,
+  "n_kept": 0,
+  "n_settled": 0,
+  "total_pnl": 0.0,
+  "coins": [
+    "solana",
+    "hyperliquid",
+    "bnb",
+    "bitcoin",
+    "xrp",
+    "dogecoin",
+    "ethereum"
+  ],
+  "png": "research_crypto_multidim_compare_day_20261023.png",
+  "cells_nonzero": []
+}

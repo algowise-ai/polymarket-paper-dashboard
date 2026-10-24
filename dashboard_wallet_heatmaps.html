@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wallet Heatmaps · Polymarket Wallet</title>
+<style>
+:root{
+  --bg:#0f1419;--panel:#152032;--border:#243044;--text:#e7ecf3;--muted:#8b9bb4;
+  --blue:#59c2ff;--amber:#f0c674;--green:#3dd68c;--red:#f07178;--empty:#1a2332;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.4}
+header{padding:14px 16px;border-bottom:1px solid var(--border);position:sticky;top:0;
+  background:rgba(15,20,25,.96);backdrop-filter:blur(8px);z-index:30}
+h1{font-size:17px;margin:0;font-weight:600;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;
+  background:#243044;color:var(--amber);border:1px solid var(--border)}
+.meta{color:var(--muted);font-size:12px;margin-top:6px}
+.subnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.subnav .subnav-label{color:var(--muted);font-size:11px;font-weight:600;margin-right:2px}
+.subnav a.subtab{display:inline-block;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:650;
+  border:1px solid var(--border);background:var(--panel);color:var(--muted);text-decoration:none}
+.subnav a.subtab:hover{border-color:var(--blue);color:var(--blue);text-decoration:none}
+.subnav a.subtab.on{border-color:var(--blue);color:var(--text);background:rgba(89,194,255,.12)}
+.crumb{font-size:12px;color:var(--muted);margin-top:4px}
+.crumb strong{color:var(--text);font-weight:650}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+main{padding:14px 16px 48px;max-width:1400px;margin:0 auto}
+.toolbar,.dates{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 0}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--panel)}
+.seg button{appearance:none;border:0;background:transparent;color:var(--muted);padding:7px 12px;
+  font-size:12px;font-weight:600;cursor:pointer}
+.seg button.on{background:#243044;color:var(--text)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{border:1px solid var(--border);background:var(--panel);color:var(--muted);border-radius:999px;
+  padding:5px 10px;font-size:12px;font-weight:600;cursor:pointer}
+.chip.on{border-color:var(--blue);color:var(--blue);background:rgba(89,194,255,.1)}
+label.fld{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+select,input[type="date"]{background:var(--panel);color:var(--text);border:1px solid var(--border);
+  border-radius:8px;padding:6px 8px;font-size:12px}
+.block{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin:14px 0}
+.block h2{margin:0 0 8px;font-size:14px;font-weight:600}
+.hint{font-size:11px;color:var(--muted);margin:0 0 10px}
+.stats{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12px;color:var(--muted);margin-bottom:8px}
+.stats strong{color:var(--text);font-variant-numeric:tabular-nums}
+.pos{color:var(--green)} .neg{color:var(--red)}
+.scroll{overflow:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:8px;background:#0b1016}
+table.hm{border-collapse:collapse;font-size:10px;min-width:max-content}
+table.hm th,table.hm td{border:1px solid #1e2a3d;text-align:center;padding:0;min-width:28px;height:26px;
+  font-variant-numeric:tabular-nums;user-select:none}
+table.hm th.y{position:sticky;left:0;z-index:2;background:#152032;color:var(--text);font-size:11px;
+  font-weight:700;min-width:42px;padding:0 6px;text-align:right}
+table.hm th.x{background:#152032;color:var(--muted);font-weight:600;font-size:10px;height:22px}
+table.hm th.corner{position:sticky;left:0;z-index:3;background:#152032;min-width:42px}
+table.hm th.totx,table.hm th.toty{background:#1a2740;color:var(--amber);font-weight:700;font-size:10px}
+table.hm td.tot{background:#1a2740;font-weight:700}
+table.hm td.tot .v{font-size:9px}
+table.hm td.tot.grand{background:#243044;outline:1px solid var(--amber);outline-offset:-1px}
+table.hm th.toty{position:sticky;left:0;z-index:2}
+table.hm td.cell{cursor:default}
+table.hm td.cell:hover{outline:1px solid var(--blue);outline-offset:-1px;z-index:1;position:relative}
+table.hm td .v{display:block;padding:3px 2px;line-height:1.1;font-size:9px;font-weight:600}
+.empty{background:var(--empty);color:transparent}
+#tip{position:fixed;z-index:50;pointer-events:none;display:none;background:#0b1016;border:1px solid var(--border);
+  border-radius:8px;padding:8px 10px;font-size:11px;max-width:260px;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+#tip .t{font-weight:700;margin-bottom:4px}
+pre.gz{margin:0;padding:10px;overflow:auto;max-height:360px;background:#0b1016;border:1px solid var(--border);
+  border-radius:8px;font-size:11px;white-space:pre-wrap}
+.err{color:var(--red);font-size:13px}
+footer{color:var(--muted);font-size:11px;padding:16px;text-align:center}
+@media(max-width:600px){
+  table.hm th.y{font-size:10px;min-width:36px}
+  table.hm td .v{font-size:8px}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Polymarket Wallet · Heatmaps <span class="badge">PAPER ONLY</span></h1>
+  <div class="crumb">
+    <a href="dashboard.html">V1</a> ·
+    <a href="dashboard_v2.html">Crypto Up / Down</a> ·
+    <a href="dashboard_wallet.html"><strong>Polymarket Wallet</strong></a> ·
+    <strong>Heatmaps</strong>
+    · subpage (not a standalone dashboard)
+  </div>
+  <div class="subnav">
+    <span class="subnav-label">Wallet</span>
+    <a class="subtab" href="dashboard_wallet.html">← Ledger</a>
+    <a class="subtab on" href="dashboard_wallet_heatmaps.html">Heatmaps</a>
+  </div>
+  <div class="subnav" id="pfTabNav">
+    <span class="subnav-label">Portfolio</span>
+    <a href="#" class="subtab on" data-pf="all">All</a>
+    <a href="#" class="subtab" data-pf="01">Portfolio 01</a>
+    <a href="#" class="subtab" data-pf="02">Portfolio 02</a>
+    <a href="#" class="subtab" data-pf="03">Portfolio 03</a>
+    <a href="#" class="subtab" data-pf="04">Portfolio 04</a>
+  </div>
+  <div class="meta">interactive grid · PnL$ cells · Σ row/col · date filter HKT · peer: <a href="dashboard_v2_heatmaps.html">Crypto heatmaps</a> · <a href="dashboard_finance.html">Finance</a></div>
+  <div class="meta" id="builtMeta">Loading…</div>
+  <div class="dates" id="dateBar">
+    <label class="fld">Period
+      <select id="periodSel"></select>
+    </label>
+    <label class="fld">Day (HKT)
+      <input type="date" id="dayPick"/>
+    </label>
+    <label class="fld">From
+      <input type="date" id="fromPick"/>
+    </label>
+    <label class="fld">To
+      <input type="date" id="toPick"/>
+    </label>
+    <button type="button" class="chip" id="btnApplyRange">Apply range</button>
+    <button type="button" class="chip" id="btnClearDay">Clear day</button>
+  </div>
+  <div class="toolbar">
+    <div class="seg" id="viewSeg">
+      <button type="button" data-view="multidim" class="on">Multidim · HKT×¢</button>
+      <button type="button" data-view="coin_hour">Coin×Hour</button>
+      <button type="button" data-view="window_px">Window×¢</button>
+      <button type="button" data-view="px_hour">¢×Hour</button>
+      <button type="button" data-view="coin_session">Coin×Session</button>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="block" id="filterBlock">
+    <h2 id="panelTitle">Multidim</h2>
+    <p class="hint" id="panelHint">Y = limit 95c→80c + 15c · X = HKT 0–23 · PnL$ primary · Σ row/col + overall. Colour: darker green/red = larger |PnL$|; P03 prefers LIGHT green (scale not inverted). Portfolio filter 01/02/03/04 from book metadata (not name prefix) + coin + window.</p>
+    <div class="stats" id="summaryStats"></div>
+    <div class="chips" id="coinChips" style="margin-bottom:8px"></div>
+    <div class="chips" id="winChips"></div>
+  </section>
+  <section class="block">
+    <div class="scroll" id="gridWrap"><p class="meta">Loading data…</p></div>
+  </section>
+  <section class="block">
+    <h2>Green zones (latest)</h2>
+    <p class="hint">Stable cum green cells for Wallet discussion — ranked LIGHT-green first for P03; no auto-open.</p>
+    <pre class="gz" id="greenPre">(none)</pre>
+  </section>
+</main>
+<div id="tip"></div>
+<footer>Subpage of Polymarket Wallet · Phase-1 PAPER · local :8769 / Pages · PnL$ primary</footer>
+<script>
+(function(){
+  const PAGE_TITLE = "Wallet Heatmaps · Polymarket Wallet";
+  const LS_PERIOD = "pm-heat-period:" + PAGE_TITLE;
+  const LS_VIEW = "pm-heat-view:" + PAGE_TITLE;
+  const LS_DAY = "pm-heat-day:" + PAGE_TITLE;
+  const LS_FROM = "pm-heat-from:" + PAGE_TITLE;
+  const LS_TO = "pm-heat-to:" + PAGE_TITLE;
+  const LS_COIN = "pm-heat-coin:" + PAGE_TITLE;
+  const LS_WIN = "pm-heat-win:" + PAGE_TITLE;
+
+  const state = {
+    data:null, view:"multidim", period:"cal_month",
+    day:null, from:null, to:null, coin:null, window:null, pf:"all"
+  };
+  const LS_PF = "pm-heat-pf:" + PAGE_TITLE;
+  const tip = document.getElementById("tip");
+  const $ = (id)=>document.getElementById(id);
+
+  function parseYMD(s){
+    if (!s) return null;
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+    if (!m) return null;
+    return {y:+m[1], m:+m[2], d:+m[3], s};
+  }
+  function todayHKT(){
+    return (state.data && state.data.today_hkt) || new Date().toISOString().slice(0,10);
+  }
+  function addDaysYMD(ymd, days){
+    const dt = new Date(Date.UTC(ymd.y, ymd.m-1, ymd.d));
+    dt.setUTCDate(dt.getUTCDate()+days);
+    return dt.toISOString().slice(0,10);
+  }
+  function cmpYMD(a,b){ return a<b ? -1 : a>b ? 1 : 0; }
+
+  /** Resolve active [from,to] inclusive HKT dates from period / day / custom range. */
+  function activeRange(){
+    if (state.day){
+      return {from: state.day, to: state.day, label: "Day "+state.day};
+    }
+    if (state.from && state.to){
+      const a = state.from <= state.to ? state.from : state.to;
+      const b = state.from <= state.to ? state.to : state.from;
+      return {from:a, to:b, label: a+" → "+b};
+    }
+    const today = parseYMD(todayHKT());
+    const key = state.period || "cal_month";
+    if (key === "all"){
+      const min = state.data.crypto.min_day;
+      const max = state.data.crypto.max_day || todayHKT();
+      return {from: min || todayHKT(), to: max, label: "All"};
+    }
+    if (key === "cal_month"){
+      const from = today.y + "-" + String(today.m).padStart(2,"0") + "-01";
+      return {from, to: today.s, label: "Last month (HKT calendar)"};
+    }
+    const map = { "1d":1,"2d":2,"3d":3,"4d":4,"5d":5,"1w":7,"2w":14,"3w":21,"1m":30,"2m":60,"3m":90 };
+    const n = map[key] || 1;
+    // rolling n calendar days ending today inclusive
+    const from = addDaysYMD(today, -(n-1));
+    return {from, to: today.s, label: key};
+  }
+
+  function filteredCells(){
+    const r = activeRange();
+    const out = [];
+    for (const cell of (state.data.crypto.cells || [])){
+      if (cmpYMD(cell.d, r.from) < 0 || cmpYMD(cell.d, r.to) > 0) continue;
+      if (state.pf && state.pf !== "all") { const pfs = (Array.isArray(cell.pfs) && cell.pfs.length) ? cell.pfs.map(String) : [String(cell.pf||"")]; if (!pfs.includes(String(state.pf))) continue; }
+      out.push(cell);
+    }
+    return {cells: out, range: r};
+  }
+  function syncPfTabs(){
+    document.querySelectorAll("#pfTabNav a.subtab").forEach(a=>{
+      a.classList.toggle("on", a.getAttribute("data-pf") === (state.pf||"all"));
+    });
+  }
+  function setPortfolio(pf){
+    state.pf = pf || "all";
+    syncPfTabs();
+    render();
+  }
+
+  // Colour scale: alpha rises with |PnL$|/maxAbs → darker green/red = larger |PnL$|.
+  // P03 selection prefers LIGHT green (not dark); we do not invert this scale.
+  function pnlColor(v, maxAbs){
+    if (v==null || Number.isNaN(v)) return "var(--empty)";
+    const m = Math.max(maxAbs||1, 0.25);
+    const t = Math.max(-1, Math.min(1, v/m));
+    if (Math.abs(t) < 0.02) return "#1e2a3d";
+    if (t>0) return `rgba(61,214,140,${(0.18+0.72*t).toFixed(3)})`;
+    return `rgba(240,113,120,${(0.18+0.72*(-t)).toFixed(3)})`;
+  }
+  function fmtPnl(v){
+    if (v==null) return "—";
+    return (v>=0?"+":"") + Number(v).toFixed(2);
+  }
+  function fmtPct(wr){
+    if (wr==null) return "—";
+    return (wr*100).toFixed(0)+"%";
+  }
+  function showTip(e, html){
+    tip.innerHTML = html; tip.style.display="block";
+    tip.style.left = Math.min(e.clientX+12, window.innerWidth-240)+"px";
+    tip.style.top = Math.min(e.clientY+12, window.innerHeight-120)+"px";
+  }
+  function hideTip(){ tip.style.display="none"; }
+
+  function setChips(el, items, selected, onPick, labelFn){
+    el.innerHTML="";
+    items.forEach(it=>{
+      const b=document.createElement("button");
+      b.type="button";
+      b.className="chip"+(it===selected?" on":"");
+      b.textContent = labelFn?labelFn(it):it;
+      b.onclick=()=>onPick(it);
+      el.appendChild(b);
+    });
+  }
+
+  function paintTotCell(td, pnl, maxAbs, tipHtml){
+    td.className = "cell tot" + (td.dataset.grand==="1" ? " grand" : "");
+    if (pnl==null || Number.isNaN(pnl)){
+      td.innerHTML='<span class="v">·</span>';
+      return;
+    }
+    td.style.background = td.dataset.grand==="1" ? "" : pnlColor(pnl, maxAbs);
+    const span=document.createElement("span"); span.className="v";
+    span.style.color = pnl>=0 ? "#d8ffe8" : "#ffd6d8";
+    span.textContent = Math.abs(pnl)>=0.005 ? ((pnl>=0?"+":"")+pnl.toFixed(2)) : "0";
+    td.appendChild(span);
+    td.addEventListener("mousemove", (e)=>{
+      const cls = pnl>=0?"pos":"neg";
+      showTip(e, tipHtml.replace("__CLS__", cls).replace("__PNL__", fmtPnl(pnl)));
+    });
+    td.addEventListener("mouseleave", hideTip);
+  }
+
+  function renderMatrix(rows, cols, cellMap, opts){
+    const vals = Object.values(cellMap).map(x=>x.pnl).filter(v=>v!=null);
+    const maxAbs = vals.length? Math.max(...vals.map(Math.abs), 1e-9) : 1;
+    const wrap = $("gridWrap");
+    const table = document.createElement("table");
+    table.className="hm";
+    const thead=document.createElement("thead");
+    const hr=document.createElement("tr");
+    const corner=document.createElement("th");
+    corner.className="corner";
+    corner.textContent = opts.corner || "";
+    hr.appendChild(corner);
+    cols.forEach(c=>{
+      const th=document.createElement("th"); th.className="x";
+      th.textContent=(opts.xLabel||(x=>x))(c); hr.appendChild(th);
+    });
+    const thSum=document.createElement("th"); thSum.className="totx"; thSum.textContent="Σ";
+    thSum.title="Column / row PnL$ subtotal";
+    hr.appendChild(thSum);
+    thead.appendChild(hr); table.appendChild(thead);
+
+    const colSums = cols.map(()=>0);
+    const colNs = cols.map(()=>0);
+    let grand = 0, grandN = 0;
+
+    const tbody=document.createElement("tbody");
+    rows.forEach(r=>{
+      const tr=document.createElement("tr");
+      const th=document.createElement("th"); th.className="y";
+      th.textContent=(opts.yLabel||(x=>x))(r); tr.appendChild(th);
+      let rowSum = 0, rowN = 0;
+      cols.forEach((c, ci)=>{
+        const td=document.createElement("td");
+        const cell=cellMap[r+"|"+c];
+        if (!cell){
+          td.className="cell empty"; td.innerHTML='<span class="v">·</span>';
+        } else {
+          td.className="cell";
+          td.style.background=pnlColor(cell.pnl, maxAbs);
+          const span=document.createElement("span"); span.className="v";
+          span.style.color = cell.pnl>=0 ? "#d8ffe8" : "#ffd6d8";
+          span.textContent = Math.abs(cell.pnl)>=0.005 ? ((cell.pnl>=0?"+":"")+cell.pnl.toFixed(2)) : "0";
+          td.appendChild(span);
+          td.addEventListener("mousemove", (e)=>{
+            const cls = cell.pnl>=0?"pos":"neg";
+            showTip(e, `<div class="t">${opts.tipTitle(r,c)}</div>
+              <div class="${cls}">PnL ${fmtPnl(cell.pnl)}</div>
+              <div>n=${cell.n||0} · win ${fmtPct(cell.wr)}</div>`);
+          });
+          td.addEventListener("mouseleave", hideTip);
+          rowSum += cell.pnl||0;
+          rowN += cell.n||0;
+          colSums[ci] += cell.pnl||0;
+          colNs[ci] += cell.n||0;
+          grand += cell.pnl||0;
+          grandN += cell.n||0;
+        }
+        tr.appendChild(td);
+      });
+      const tdR=document.createElement("td");
+      paintTotCell(tdR, rowSum, maxAbs,
+        `<div class="t">Row Σ · ${(opts.yLabel||(x=>x))(r)}</div><div class="__CLS__">PnL __PNL__</div><div>n=${rowN}</div>`);
+      tr.appendChild(tdR);
+      tbody.appendChild(tr);
+    });
+
+    // column totals + grand
+    const trT=document.createElement("tr");
+    const thL=document.createElement("th"); thL.className="y toty"; thL.textContent="Σ";
+    thL.title="Column PnL$ subtotal";
+    trT.appendChild(thL);
+    cols.forEach((c, ci)=>{
+      const td=document.createElement("td");
+      paintTotCell(td, colSums[ci], maxAbs,
+        `<div class="t">Col Σ · ${(opts.xLabel||(x=>x))(c)}</div><div class="__CLS__">PnL __PNL__</div><div>n=${colNs[ci]}</div>`);
+      trT.appendChild(td);
+    });
+    const tdG=document.createElement("td");
+    tdG.dataset.grand="1";
+    paintTotCell(tdG, grand, maxAbs,
+      `<div class="t">Overall Σ</div><div class="__CLS__">PnL __PNL__</div><div>n=${grandN}</div>`);
+    trT.appendChild(tdG);
+    tbody.appendChild(trT);
+
+    table.appendChild(tbody);
+    wrap.innerHTML=""; wrap.appendChild(table);
+  }
+
+  function agg(cells, rowKey, colKey){
+    const map = {};
+    cells.forEach(cell=>{
+      const r = String(rowKey(cell));
+      const c = String(colKey(cell));
+      const k = r+"|"+c;
+      if (!map[k]) map[k] = {r, c, pnl:0, n:0, wins:0};
+      map[k].pnl += cell.pnl||0;
+      map[k].n += cell.n||0;
+      // approx wins from wr*n
+      if (cell.wr!=null && cell.n) map[k].wins += cell.wr * cell.n;
+    });
+    Object.values(map).forEach(v=>{
+      v.pnl = Math.round(v.pnl*10000)/10000;
+      v.wr = v.n ? Math.round((v.wins/v.n)*10000)/10000 : null;
+      delete v.wins;
+    });
+    return map;
+  }
+
+  function savePrefs(){
+    try {
+      localStorage.setItem(LS_PERIOD, state.period||"cal_month");
+      localStorage.setItem(LS_VIEW, state.view||"multidim");
+      if (state.day) localStorage.setItem(LS_DAY, state.day); else localStorage.removeItem(LS_DAY);
+      if (state.from) localStorage.setItem(LS_FROM, state.from); else localStorage.removeItem(LS_FROM);
+      if (state.to) localStorage.setItem(LS_TO, state.to); else localStorage.removeItem(LS_TO);
+      if (state.coin) localStorage.setItem(LS_COIN, state.coin);
+      if (state.window) localStorage.setItem(LS_WIN, state.window);
+      localStorage.setItem(LS_PF, state.pf||"all");
+    } catch(e){}
+  }
+  function loadPrefs(){
+    try {
+      const p = localStorage.getItem(LS_PERIOD); if (p) state.period = p;
+      const v = localStorage.getItem(LS_VIEW); if (v) state.view = v;
+      const d = localStorage.getItem(LS_DAY); if (d) state.day = d;
+      const f = localStorage.getItem(LS_FROM); if (f) state.from = f;
+      const t = localStorage.getItem(LS_TO); if (t) state.to = t;
+      const c = localStorage.getItem(LS_COIN); if (c) state.coin = c;
+      const w = localStorage.getItem(LS_WIN); if (w) state.window = w;
+      const pf = localStorage.getItem(LS_PF); if (pf) state.pf = pf;
+    } catch(e){}
+  }
+
+  function syncDateControls(){
+    const cry = state.data.crypto;
+    const dayEl = $("dayPick"), fromEl=$("fromPick"), toEl=$("toPick"), periodEl=$("periodSel");
+    if (cry.min_day){
+      dayEl.min = fromEl.min = toEl.min = cry.min_day;
+      dayEl.max = fromEl.max = toEl.max = cry.max_day || todayHKT();
+    }
+    dayEl.value = state.day || "";
+    fromEl.value = state.from || "";
+    toEl.value = state.to || "";
+    periodEl.value = state.period || "cal_month";
+    // when single day or custom range active, period select still shows last preset but day/range wins
+  }
+
+  function render(){
+    if (!state.data) return;
+    savePrefs();
+    syncDateControls();
+    const {cells, range} = filteredCells();
+    const totalPnl = cells.reduce((s,c)=>s+(c.pnl||0),0);
+    const totalN = cells.reduce((s,c)=>s+(c.n||0),0);
+
+    // view seg highlight
+    $("viewSeg").querySelectorAll("button").forEach(b=>{
+      b.classList.toggle("on", b.getAttribute("data-view")===state.view);
+    });
+
+    if (state.view === "multidim"){
+      $("filterBlock").style.display="";
+      $("coinChips").style.display="";
+      $("winChips").style.display="";
+      $("panelTitle").textContent = "Multidim · coin × window → HKT × 15c+80–95c";
+      $("panelHint").textContent = "Y = limit 95c→80c + 15c · X = HKT 0–23 · PnL$ primary · Σ row/col + overall. Darker = larger |PnL$|; P03 prefers LIGHT green. Filters: portfolio + coin + window + date.";
+      const coins = state.data.crypto.coins;
+      const wins = state.data.crypto.windows;
+      if (!state.coin || !coins.includes(state.coin)) state.coin = coins[0];
+      if (!state.window || !wins.includes(state.window)) state.window = wins.includes("15m")?"15m":wins[0];
+      setChips($("coinChips"), coins, state.coin, c=>{ state.coin=c; render(); }, c=>c.toUpperCase());
+      setChips($("winChips"), wins, state.window, w=>{ state.window=w; render(); });
+      const sub = cells.filter(c=>c.c===state.coin && c.w===state.window);
+      const map = {};
+      sub.forEach(c=>{ const k=c.p+"|"+c.h; if(!map[k]) map[k]={pnl:0,n:0,wins:0}; map[k].pnl+=c.pnl||0; map[k].n+=c.n||0; if(c.wr!=null) map[k].wins+=(c.wr*c.n); });
+      Object.keys(map).forEach(k=>{ const v=map[k]; v.pnl=Math.round(v.pnl*10000)/10000; v.wr=v.n?Math.round(v.wins/v.n*10000)/10000:null; delete v.wins; });
+      syncPfTabs();
+      $("summaryStats").innerHTML =
+        `<span>portfolio <strong>${state.pf==="all"?"All":"P"+state.pf}</strong></span>`+
+        `<span>range <strong>${range.label}</strong></span>`+
+        `<span>${range.from} → ${range.to}</span>`+
+        `<span>settled <strong>${totalN}</strong></span>`+
+        `<span>PnL$ <strong class="${totalPnl>=0?"pos":"neg"}">${fmtPnl(totalPnl)}</strong></span>`+
+        `<span>view <strong>${state.coin} · ${state.window}</strong></span>`;
+      renderMatrix(state.data.crypto.limits, state.data.crypto.hours.map(String), map, {
+        corner:"¢\\h", yLabel:r=>r+"c", xLabel:c=>c,
+        tipTitle:(r,c)=>`${state.coin} ${state.window} · ${r}c @ HKT ${c}`
+      });
+      return;
+    }
+
+    // pivot views
+    $("coinChips").innerHTML=""; $("winChips").innerHTML="";
+    const titles = {
+      coin_hour:["Coin × HKT hour","Y=CRYPTO · X=HKT hour"],
+      window_px:["Window × limit ¢","Y=WINDOW · X=15c+80–95c"],
+      px_hour:["Limit ¢ × HKT hour","Y=15c+80–95c · X=HKT hour"],
+      coin_session:["Coin × session","Y=CRYPTO · X=session"]
+    };
+    const [t,h] = titles[state.view] || [state.view,""];
+    $("panelTitle").textContent = t;
+    $("panelHint").textContent = h + " · Σ each row/col + overall (bottom-right) · filtered by date";
+    syncPfTabs();
+    $("summaryStats").innerHTML =
+      `<span>portfolio <strong>${state.pf==="all"?"All":"P"+state.pf}</strong></span>`+
+      `<span>range <strong>${range.label}</strong></span>`+
+      `<span>${range.from} → ${range.to}</span>`+
+      `<span>settled <strong>${totalN}</strong></span>`+
+      `<span>PnL$ <strong class="${totalPnl>=0?"pos":"neg"}">${fmtPnl(totalPnl)}</strong></span>`;
+
+    let rows, cols, map, yLab=x=>x, xLab=x=>x, tipT=(r,c)=>r+" × "+c;
+    if (state.view==="coin_hour"){
+      rows = state.data.crypto.coins;
+      cols = state.data.crypto.hours.map(String);
+      map = agg(cells, c=>c.c, c=>c.h);
+      tipT=(r,c)=>r+" @ HKT "+c;
+    } else if (state.view==="window_px"){
+      rows = state.data.crypto.windows;
+      cols = ["15","80","83","85","88","90","93","95"].filter(x=>state.data.crypto.limits.includes(x)||true);
+      // display X ascending 80→95
+      map = agg(cells, c=>c.w, c=>c.p);
+      xLab = c=>c+"c";
+      tipT=(r,c)=>r+" · "+c+"c";
+    } else if (state.view==="px_hour"){
+      rows = state.data.crypto.limits; // 95→80 + 15
+      cols = state.data.crypto.hours.map(String);
+      map = agg(cells, c=>c.p, c=>c.h);
+      yLab = r=>r+"c";
+      tipT=(r,c)=>r+"c @ HKT "+c;
+    } else if (state.view==="coin_session"){
+      rows = state.data.crypto.coins;
+      cols = state.data.crypto.sessions;
+      map = agg(cells, c=>c.c, c=>c.s);
+    } else {
+      $("gridWrap").innerHTML='<p class="err">Unknown view</p>';
+      return;
+    }
+    renderMatrix(rows, cols, map, {corner:"", yLabel:yLab, xLabel:xLab, tipTitle:tipT});
+  }
+
+  function wire(){
+    const periodEl = $("periodSel");
+    (state.data.period_presets||[]).forEach(p=>{
+      const o=document.createElement("option");
+      o.value=p.key; o.textContent=p.label; periodEl.appendChild(o);
+    });
+    periodEl.addEventListener("change", ()=>{
+      state.period = periodEl.value;
+      state.day = null; // period overrides single day
+      // keep custom range only if user re-applies
+      state.from = null; state.to = null;
+      render();
+    });
+    $("dayPick").addEventListener("change", ()=>{
+      const v = $("dayPick").value;
+      state.day = v || null;
+      if (state.day){ state.from=null; state.to=null; }
+      render();
+    });
+    $("btnClearDay").addEventListener("click", ()=>{
+      state.day=null; $("dayPick").value=""; render();
+    });
+    $("btnApplyRange").addEventListener("click", ()=>{
+      const f=$("fromPick").value, t=$("toPick").value;
+      if (!f || !t){ return; }
+      state.from=f; state.to=t; state.day=null; $("dayPick").value="";
+      render();
+    });
+    $("viewSeg").querySelectorAll("button").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        state.view = btn.getAttribute("data-view");
+        render();
+      });
+    });
+    document.querySelectorAll("#pfTabNav a.subtab").forEach(a=>{
+      a.addEventListener("click", (e)=>{
+        e.preventDefault();
+        setPortfolio(a.getAttribute("data-pf")||"all");
+      });
+    });
+  }
+
+  fetch("dashboard_wallet_heatmaps_data.json", {cache:"no-store"})
+    .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+    .then(data=>{
+      state.data = data;
+      loadPrefs();
+      // validate coin/window against data
+      const cry = data.crypto||{};
+      if (state.coin && !(cry.coins||[]).includes(state.coin)) state.coin=null;
+      if (state.window && !(cry.windows||[]).includes(state.window)) state.window=null;
+      $("builtMeta").textContent =
+        `Built ${data.built_hkt||"—"} · days ${cry.min_day||"?"}→${cry.max_day||"?"} · cells ${cry.n_cells||0} · settled ${cry.n_settled||0} · auto-refresh 5m`;
+      $("greenPre").textContent = data.green_zones_md || "(no green-zones report)";
+      wire();
+      render();
+    })
+    .catch(err=>{
+      $("builtMeta").textContent="Failed to load data";
+      $("gridWrap").innerHTML='<p class="err">Could not load dashboard_wallet_heatmaps_data.json: '+err+"</p>";
+    });
+})();
+</script>
+</body>
+</html>
