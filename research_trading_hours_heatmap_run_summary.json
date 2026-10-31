@@ -1,0 +1,259 @@
+{
+  "generated_hkt": "2026-10-27T04:11:50.299282+08:00",
+  "day_results": [
+    {
+      "mode": "day",
+      "day_hkt": "2026-10-27",
+      "paths": {
+        "png": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_day_20261027.png",
+        "png_latest": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_day_latest.png",
+        "md": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_day_20261027.md",
+        "json": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_day_20261027.json"
+      },
+      "dual": {
+        "n_settled": 0,
+        "n_open": 4,
+        "n_wins": 0,
+        "n_losses": 0,
+        "n_flat": 0,
+        "realized_pnl": 0.0,
+        "stake_settled": 0.0,
+        "open_stake": 200.0,
+        "win_rate": null,
+        "avg_pnl": null
+      },
+      "crypto": {
+        "n_settled": 341,
+        "n_open": 32,
+        "n_wins": 287,
+        "n_losses": 54,
+        "n_flat": 0,
+        "realized_pnl": -14.5024,
+        "stake_settled": 341.0,
+        "open_stake": 32.0,
+        "win_rate": 0.8416,
+        "avg_pnl": -0.0425
+      },
+      "finance": {
+        "n_settled": 0,
+        "n_open": 0,
+        "n_wins": 0,
+        "n_losses": 0,
+        "n_flat": 0,
+        "realized_pnl": 0.0,
+        "stake_settled": 0.0,
+        "open_stake": 0.0,
+        "win_rate": null,
+        "avg_pnl": null
+      },
+      "first_entry_hkt": "2026-10-27T00:03:35+08:00",
+      "last_entry_hkt": "2026-10-27T04:03:11+08:00",
+      "crypto_window": {
+        "15m": {
+          "n": 116,
+          "pnl": -8.0651,
+          "wr": 0.819
+        },
+        "1h": {
+          "n": 53,
+          "pnl": 7.318,
+          "wr": 0.9811
+        },
+        "4h": {
+          "n": 0,
+          "pnl": 0.0,
+          "wr": null
+        },
+        "5m": {
+          "n": 172,
+          "pnl": -13.7553,
+          "wr": 0.814
+        },
+        "daily": {
+          "n": 0,
+          "pnl": 0.0,
+          "wr": null
+        }
+      },
+      "crypto_px": {
+        "80": {
+          "n": 62,
+          "pnl": -7.476,
+          "wr": 0.7097
+        },
+        "83": {
+          "n": 47,
+          "pnl": -0.2287,
+          "wr": 0.8298
+        },
+        "85": {
+          "n": 61,
+          "pnl": -6.1189,
+          "wr": 0.7705
+        },
+        "88": {
+          "n": 35,
+          "pnl": -0.952,
+          "wr": 0.8571
+        },
+        "90": {
+          "n": 33,
+          "pnl": -2.0115,
+          "wr": 0.8485
+        },
+        "93": {
+          "n": 46,
+          "pnl": 0.2677,
+          "wr": 0.9348
+        },
+        "95": {
+          "n": 57,
+          "pnl": 2.017,
+          "wr": 0.9825
+        }
+      }
+    }
+  ],
+  "cum": {
+    "mode": "cum",
+    "day_hkt": null,
+    "paths": {
+      "png": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_cum_from_day1.png",
+      "png_latest": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_cum_latest.png",
+      "md": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_cum_from_day1.md",
+      "json": "/Users/alan/Grok Bot/Polymarket/out/research_trading_hours_heatmap_cum_from_day1.json"
+    },
+    "dual": {
+      "n_settled": 814,
+      "n_open": 54,
+      "n_wins": 530,
+      "n_losses": 284,
+      "n_flat": 0,
+      "realized_pnl": -1351.3759,
+      "stake_settled": 40700.0,
+      "open_stake": 2700.0,
+      "win_rate": 0.6511,
+      "avg_pnl": -1.6602
+    },
+    "crypto": {
+      "n_settled": 12395,
+      "n_open": 32,
+      "n_wins": 10736,
+      "n_losses": 1659,
+      "n_flat": 0,
+      "realized_pnl": -203.1659,
+      "stake_settled": 12395.0,
+      "open_stake": 32.0,
+      "win_rate": 0.8662,
+      "avg_pnl": -0.0164
+    },
+    "finance": {
+      "n_settled": 0,
+      "n_open": 0,
+      "n_wins": 0,
+      "n_losses": 0,
+      "n_flat": 0,
+      "realized_pnl": 0.0,
+      "stake_settled": 0.0,
+      "open_stake": 0.0,
+      "win_rate": null,
+      "avg_pnl": null
+    },
+    "first_entry_hkt": "2026-10-15T19:20:58+08:00",
+    "last_entry_hkt": "2026-10-27T04:03:11+08:00",
+    "crypto_window": {
+      "15m": {
+        "n": 4589,
+        "pnl": -66.8181,
+        "wr": 0.866
+      },
+      "1h": {
+        "n": 1174,
+        "pnl": 34.1698,
+        "wr": 0.9029
+      },
+      "4h": {
+        "n": 436,
+        "pnl": 1.6256,
+        "wr": 0.8761
+      },
+      "5m": {
+        "n": 6147,
+        "pnl": -178.1607,
+        "wr": 0.8577
+      },
+      "daily": {
+        "n": 49,
+        "pnl": 6.0175,
+        "wr": 0.9796
+      }
+    },
+    "crypto_px": {
+      "80": {
+        "n": 1786,
+        "pnl": -58.1579,
+        "wr": 0.7794
+      },
+      "83": {
+        "n": 1699,
+        "pnl": -36.8483,
+        "wr": 0.817
+      },
+      "85": {
+        "n": 1769,
+        "pnl": -47.2524,
+        "wr": 0.831
+      },
+      "88": {
+        "n": 1743,
+        "pnl": -31.0262,
+        "wr": 0.8663
+      },
+      "90": {
+        "n": 1715,
+        "pnl": -25.5203,
+        "wr": 0.8875
+      },
+      "93": {
+        "n": 1782,
+        "pnl": -1.4406,
+        "wr": 0.9287
+      },
+      "95": {
+        "n": 1901,
+        "pnl": -2.9202,
+        "wr": 0.9463
+      }
+    }
+  },
+  "verify_day_subseteq_cum": [
+    {
+      "system": "crypto",
+      "day": "2026-10-27",
+      "day_n": 341,
+      "cum_n": 12395,
+      "day_n_le_cum": true,
+      "day_pnl": -14.5024,
+      "cum_pnl": -203.1659
+    },
+    {
+      "system": "dual",
+      "day": "2026-10-27",
+      "day_n": 0,
+      "cum_n": 814,
+      "day_n_le_cum": true,
+      "day_pnl": 0.0,
+      "cum_pnl": -1351.3759
+    },
+    {
+      "system": "finance",
+      "day": "2026-10-27",
+      "day_n": 0,
+      "cum_n": 0,
+      "day_n_le_cum": true,
+      "day_pnl": 0.0,
+      "cum_pnl": 0.0
+    }
+  ],
+  "refresh_cmd": "python3 \"/Users/alan/Grok Bot/Polymarket/bin/research_trading_hours_heatmaps.py\" --day today --cum"
+}
