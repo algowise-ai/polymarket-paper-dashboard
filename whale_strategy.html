@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Polymarket Whale Strategy — Paper Summary</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a2332;
+    --border: #2d3a4d;
+    --text: #e7ecf3;
+    --muted: #9aa8bc;
+    --pos: #3dd68c;
+    --neg: #f07178;
+    --accent: #5b9fd4;
+    --warn: #e6c07b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 28px 48px;
+  }
+  h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+  }
+  .badge {
+    display: inline-block;
+    background: #2a1f0e;
+    color: var(--warn);
+    border: 1px solid #5a4a22;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    font-size: 1.05rem;
+    margin: 0 0 10px;
+    color: var(--accent);
+  }
+  .verdict {
+    font-size: 1.08rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  tr:last-child td { border-bottom: none; }
+  .num { font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .pos { color: var(--pos); }
+  .neg { color: var(--neg); }
+  .flat { color: var(--muted); }
+  ul { margin: 8px 0 0; padding-left: 1.2em; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .links a {
+    display: inline-block;
+    margin: 4px 14px 4px 0;
+    padding: 6px 12px;
+    background: #121a24;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .note {
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+  footer {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 14px;
+  }
+  .tab {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: #121a24;
+    color: var(--text);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.88rem;
+    cursor: pointer;
+  }
+  .tab.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: #142033;
+  }
+  .pill {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--border);
+  }
+  .pill.open { color: var(--warn); border-color: #5a4a22; background: #2a1f0e; }
+  .pill.settled { color: var(--muted); }
+  .market {
+    max-width: 420px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #trades-meta { margin: 0 0 10px; }
+  #trades-status { margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Polymarket Whale Strategy</h1>
+  <p class="sub">
+    <span class="badge">PAPER ONLY</span>
+    AI／研究摘要（可分享）· snapshot @ 2026-11-04 ~13:37 HKT · 數字來自本地紙上 ledger，唔連真實錢包
+  </p>
+
+  <div class="card verdict">
+    <h2>一句結論</h2>
+    <p>
+      跟住 leaders dig 落咗三條紙上原型：
+      <strong>swisstony → T3-FV-Soccer</strong>、
+      <strong>RN1 → Pair-Inventory-Lite</strong>、
+      <strong>FLB → Favorite-Lean</strong>。
+      FT／ALL 長尾大注（例如 DEEDDIT）只觀察、<strong>唔抄</strong>。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>三本紙上 live equity</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Leader ref</th>
+          <th>Equity</th>
+          <th>Open / Settled</th>
+          <th>Realized</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>T3-FV-Soccer</strong></td>
+          <td>swisstony</td>
+          <td class="num neg">~$9140</td>
+          <td class="num">3 / 69</td>
+          <td class="num neg">−$860</td>
+          <td>fair-value soccer；edge filter</td>
+        </tr>
+        <tr>
+          <td><strong>Pair-Inventory-Lite</strong></td>
+          <td>RN1</td>
+          <td class="num flat">$10000</td>
+          <td class="num">0 / 0</td>
+          <td class="num flat">$0</td>
+          <td>flat；配對成本門檻嚴，幾乎冇 fill</td>
+        </tr>
+        <tr>
+          <td><strong>FLB-Favorite-Lean</strong></td>
+          <td>FLB</td>
+          <td class="num pos">~$11186</td>
+          <td class="num">5 / 55</td>
+          <td class="num pos">+$1186</td>
+          <td>wins 43；favorite lean</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note" style="margin-top:12px">
+      來源檔名（本地）：<code>out/trades/t3_fv_soccer.json</code>、
+      <code>pair_inventory_lite.json</code>、
+      <code>flb_favorite_lean.json</code>；研究筆記
+      <code>out/whale_strategy_reeng_20261030.md</code>、
+      <code>out/polymarket_leaders_dig_latest.md</code>。
+    </p>
+  </div>
+
+  <div class="card" id="live-trades">
+    <h2>Live paper trades</h2>
+    <p class="note" id="trades-meta">載入緊紙上成交…</p>
+    <div class="tabs" id="trade-tabs" role="tablist" aria-label="Book filter"></div>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Time (HKT)</th>
+            <th>Book</th>
+            <th>Status</th>
+            <th>Market</th>
+            <th>Outcome</th>
+            <th>Entry</th>
+            <th>Stake</th>
+            <th>PnL</th>
+          </tr>
+        </thead>
+        <tbody id="trades-body">
+          <tr><td colspan="8" class="flat">…</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" id="trades-status"></p>
+  </div>
+
+  <div class="card" id="onchain-trades">
+    <h2>On-chain whale trades</h2>
+    <p class="note" id="onchain-meta">載入緊鏈上成交…</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Time (HKT)</th>
+            <th>Wallet</th>
+            <th>Side</th>
+            <th>Market</th>
+            <th>Outcome</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Tx</th>
+          </tr>
+        </thead>
+        <tbody id="onchain-body">
+          <tr><td colspan="8" class="flat">…</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" id="onchain-status"></p>
+  </div>
+
+  <div class="card">
+    <h2>唔抄／觀察</h2>
+    <ul>
+      <li>FT skip：長尾大注／少倉巨額類（含 DEEDDIT）— 流動性同可複製性差，紙上唔跟單。</li>
+      <li>舊 T4 whale-copy：歷史大蝕，只觀察。</li>
+      <li>全部 PAPER ONLY；<code>new_entries</code>／config 變更要人手批。</li>
+      <li><strong>Live paper trades</strong>＝紙上原型成交（跟 leader 風格）。<strong>On-chain whale trades</strong>＝池內 wallet 鏈上流水（data-api v2 → <code>wallet_trades</code>）。兩者分開睇。</li>
+    </ul>
+  </div>
+
+  <div class="card links">
+    <h2>Public paper dashboards</h2>
+    <a href="./">主盤 index</a>
+    <a href="./dashboard_wallet.html">Wallet</a>
+    <a href="./dashboard_dual_wings.html">雙翼 Dual Wings</a>
+    <a href="./dashboard_v2.html">Crypto V2</a>
+    <a href="#live-trades">Live paper trades</a>
+    <a href="#onchain-trades">On-chain whale trades</a>
+  </div>
+
+  <footer>
+    algowise-ai / polymarket-paper-dashboard · static GitHub Pages · no API keys · no wallet connect · PAPER ONLY
+  </footer>
+</div>
+<script>
+(function () {
+  const BOOKS = [
+    { id: "t3_fv_soccer", label: "T3-FV-Soccer", leader: "swisstony" },
+    { id: "pair_inventory_lite", label: "Pair-Inventory-Lite", leader: "RN1" },
+    { id: "flb_favorite_lean", label: "FLB-Favorite-Lean", leader: "FLB" }
+  ];
+  const LIMIT = 40;
+  const state = { filter: "all", rows: [], errors: [] };
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function fmtPx(v) {
+    if (v == null || v === "") return "—";
+    const n = Number(v);
+    if (!Number.isFinite(n)) return "—";
+    return n.toFixed(3);
+  }
+  function fmtMoney(v) {
+    if (v == null || v === "") return "—";
+    const n = Number(v);
+    if (!Number.isFinite(n)) return "—";
+    const sign = n > 0 ? "+" : "";
+    return sign + "$" + n.toFixed(2);
+  }
+  function pnlClass(v) {
+    const n = Number(v);
+    if (!Number.isFinite(n) || n === 0) return "flat";
+    return n > 0 ? "pos" : "neg";
+  }
+  function renderTabs() {
+    const tabs = document.getElementById("trade-tabs");
+    const items = [{ id: "all", label: "All books" }].concat(
+      BOOKS.map(b => ({ id: b.id, label: b.label }))
+    );
+    tabs.innerHTML = items.map(it =>
+      `<button type="button" class="tab${state.filter === it.id ? " active" : ""}" data-id="${esc(it.id)}">${esc(it.label)}</button>`
+    ).join("");
+    tabs.querySelectorAll(".tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.filter = btn.getAttribute("data-id");
+        renderTabs();
+        renderTable();
+      });
+    });
+  }
+  function filtered() {
+    let rows = state.rows.slice();
+    if (state.filter !== "all") rows = rows.filter(r => r.book_id === state.filter);
+    rows.sort((a, b) => String(b.opened_at || "").localeCompare(String(a.opened_at || "")));
+    return rows.slice(0, LIMIT);
+  }
+  function renderTable() {
+    const body = document.getElementById("trades-body");
+    const rows = filtered();
+    if (!rows.length) {
+      body.innerHTML = `<tr><td colspan="8" class="flat">呢本而家冇紙上成交（或未載入到）。</td></tr>`;
+    } else {
+      body.innerHTML = rows.map(t => {
+        const st = (t.status || "").toLowerCase() === "open" ? "open" : "settled";
+        const time = t.opened_at_hkt || t.opened_at || "—";
+        return `<tr>
+          <td class="num">${esc(time)}</td>
+          <td>${esc(t.book_label)}</td>
+          <td><span class="pill ${st}">${esc(st)}</span></td>
+          <td class="market" title="${esc(t.market || "")}">${esc(t.market || "—")}</td>
+          <td>${esc(t.outcome || "—")}</td>
+          <td class="num">${esc(fmtPx(t.entry_price))}</td>
+          <td class="num">${esc(fmtMoney(t.stake).replace("+",""))}</td>
+          <td class="num ${pnlClass(t.pnl)}">${esc(st === "open" ? "—" : fmtMoney(t.pnl))}</td>
+        </tr>`;
+      }).join("");
+    }
+    const total = state.filter === "all" ? state.rows.length : state.rows.filter(r => r.book_id === state.filter).length;
+    const shown = rows.length;
+    const meta = document.getElementById("trades-meta");
+    meta.textContent = `顯示最近 ${shown} / ${total} 筆紙上成交（按開倉時間）。來源：./trades/*.json · PAPER ONLY`;
+    const st = document.getElementById("trades-status");
+    if (state.errors.length) {
+      st.textContent = "部分 ledger 載入失敗：" + state.errors.join("； ");
+    } else {
+      st.textContent = "硬刷新可更新。紙上 ledger：./trades/{book}.json · PAPER ONLY。";
+    }
+  }
+  async function load() {
+    renderTabs();
+    const results = await Promise.all(BOOKS.map(async (b) => {
+      try {
+        const res = await fetch("./trades/" + b.id + ".json", { cache: "no-store" });
+        if (!res.ok) throw new Error(b.id + " HTTP " + res.status);
+        const data = await res.json();
+        const trades = Array.isArray(data.trades) ? data.trades : [];
+        return trades.map(t => Object.assign({}, t, {
+          book_id: b.id,
+          book_label: b.label,
+          leader: b.leader
+        }));
+      } catch (e) {
+        state.errors.push(String(e.message || e));
+        return [];
+      }
+    }));
+    state.rows = results.flat();
+    renderTable();
+  }
+
+  function fmtSize(v) {
+    if (v == null || v === "") return "—";
+    const n = Number(v);
+    if (!Number.isFinite(n)) return "—";
+    if (Math.abs(n) >= 1000) return n.toFixed(0);
+    return n.toFixed(2);
+  }
+  function shortTx(h) {
+    if (!h) return "—";
+    const s = String(h);
+    return s.slice(0, 10) + "…";
+  }
+  async function loadOnchain() {
+    const body = document.getElementById("onchain-body");
+    const meta = document.getElementById("onchain-meta");
+    const st = document.getElementById("onchain-status");
+    try {
+      const res = await fetch("./trades/whale_onchain.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      const trades = Array.isArray(data.trades) ? data.trades : [];
+      meta.textContent = "顯示最近 " + trades.length + " 筆鏈上成交 · DB 共 "
+        + (data.total_rows != null ? data.total_rows : "?")
+        + " 行 · 最新 " + (data.newest_hkt || "—") + " HKT · 來源 data-api v2 / wallet_trades";
+      if (!trades.length) {
+        body.innerHTML = '<tr><td colspan="8" class="flat">而家冇鏈上成交可顯示。</td></tr>';
+      } else {
+        body.innerHTML = trades.map(t => {
+          const side = String(t.side || "").toUpperCase();
+          const sideCls = side === "BUY" ? "pos" : (side === "SELL" ? "neg" : "flat");
+          return "<tr>"
+            + '<td class="num">' + esc(t.ts_hkt || "—") + "</td>"
+            + "<td title=\"" + esc(t.proxy_wallet || "") + "\">" + esc(t.wallet_short || (t.proxy_wallet || "").slice(0,10) || "—") + "</td>"
+            + '<td class="' + sideCls + '">' + esc(side || "—") + "</td>"
+            + '<td class="market" title="' + esc(t.title || "") + '">' + esc(t.title || "—") + "</td>"
+            + "<td>" + esc(t.outcome || "—") + "</td>"
+            + '<td class="num">' + esc(fmtPx(t.price)) + "</td>"
+            + '<td class="num">' + esc(fmtSize(t.size)) + "</td>"
+            + '<td class="num" title="' + esc(t.tx_hash || "") + '">' + esc(shortTx(t.tx_hash)) + "</td>"
+            + "</tr>";
+        }).join("");
+      }
+      st.textContent = "硬刷新可更新。collect（whale-log）會刷新 whale_onchain.json；Pages 要 publish --push。";
+    } catch (e) {
+      body.innerHTML = '<tr><td colspan="8" class="flat">載入失敗。</td></tr>';
+      meta.textContent = "鏈上成交載入失敗";
+      st.textContent = String(e.message || e);
+    }
+  }
+
+  load();
+  loadOnchain();
+})();
+</script>
+</body>
+</html>
