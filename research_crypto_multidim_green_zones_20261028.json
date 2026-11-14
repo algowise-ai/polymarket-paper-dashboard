@@ -1,0 +1,1106 @@
+{
+  "generated_hkt": "2026-10-28 18:10:01",
+  "scope": "CUM multidim green zones \u2014 PAPER ONLY \u2014 report only (no Wallet auto-add)",
+  "axes": "coin \u00d7 window \u00d7 HKT_hour \u00d7 limit_px",
+  "metric": "realized_pnl_usd",
+  "min_pnl": 0.25,
+  "top_n": 20,
+  "cum_settled": 14389,
+  "cum_total_pnl": -264.1931,
+  "n_green_cells": 1268,
+  "n_stable_green": 48,
+  "stable_heuristic": "cum PnL$ > 0 AND positive on \u22652 of up to 3 most recent HKT days that have settled fills for the cell (or \u22651 if only one such day)",
+  "top_green_cells": [
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "93",
+      "hkt_hour": 6,
+      "n_settled": 17,
+      "realized_pnl": 0.2642,
+      "win_rate": 0.9412,
+      "avg_pnl": 0.0155,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.3147,
+          "n": 4
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.141,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 13,
+      "realized_pnl": 0.2801,
+      "win_rate": 0.9231,
+      "avg_pnl": 0.0215,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.1159,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": 0.1852,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "88",
+      "hkt_hour": 8,
+      "n_settled": 10,
+      "realized_pnl": 0.293,
+      "win_rate": 0.9,
+      "avg_pnl": 0.0293,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.4092,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 14,
+      "realized_pnl": 0.4407,
+      "win_rate": 0.9286,
+      "avg_pnl": 0.0315,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/3 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.1159,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": -1.0084,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.2085,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "coin_short": "SOL",
+      "limit_px": "88",
+      "hkt_hour": 7,
+      "n_settled": 11,
+      "realized_pnl": 0.3593,
+      "win_rate": 0.9091,
+      "avg_pnl": 0.0327,
+      "stable_green": false,
+      "stable_reason": "pos_days=1/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.1403,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": -0.7024,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "85",
+      "hkt_hour": 22,
+      "n_settled": 9,
+      "realized_pnl": 0.3182,
+      "win_rate": 0.8889,
+      "avg_pnl": 0.0354,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.153,
+          "n": 1
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "coin_short": "DOGE",
+      "limit_px": "88",
+      "hkt_hour": 8,
+      "n_settled": 12,
+      "realized_pnl": 0.4355,
+      "win_rate": 0.9167,
+      "avg_pnl": 0.0363,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.1159,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.2683,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "coin_short": "SOL",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 8,
+      "realized_pnl": 0.298,
+      "win_rate": 0.875,
+      "avg_pnl": 0.0372,
+      "stable_green": false,
+      "stable_reason": "pos_days=1/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": -0.8326,
+          "n": 2
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": 0.3586,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 8,
+      "realized_pnl": 0.3105,
+      "win_rate": 0.875,
+      "avg_pnl": 0.0388,
+      "stable_green": false,
+      "stable_reason": "pos_days=1/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.1929,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": -0.6404,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 9,
+      "realized_pnl": 0.3571,
+      "win_rate": 0.8889,
+      "avg_pnl": 0.0397,
+      "stable_green": false,
+      "stable_reason": "pos_days=1/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.3319,
+          "n": 2
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": -1.0119,
+          "n": 1
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "coin_short": "HYPE",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 8,
+      "realized_pnl": 0.3392,
+      "win_rate": 0.875,
+      "avg_pnl": 0.0424,
+      "stable_green": false,
+      "stable_reason": "pos_days=1/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.2069,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": -0.6397,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 9,
+      "realized_pnl": 0.3841,
+      "win_rate": 0.8889,
+      "avg_pnl": 0.0427,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/3 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": -1.0105,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": 0.3586,
+          "n": 2
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.1929,
+          "n": 1
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "coin_short": "HYPE",
+      "limit_px": "80",
+      "hkt_hour": 13,
+      "n_settled": 6,
+      "realized_pnl": 0.2568,
+      "win_rate": 0.8333,
+      "avg_pnl": 0.0428,
+      "stable_green": false,
+      "stable_reason": "no_recent_day_data",
+      "recent_day_pnls": []
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "95",
+      "hkt_hour": 23,
+      "n_settled": 7,
+      "realized_pnl": 0.3031,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0433,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0389,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.0777,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 6,
+      "realized_pnl": 0.264,
+      "win_rate": 1.0,
+      "avg_pnl": 0.044,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.0983,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "95",
+      "hkt_hour": 2,
+      "n_settled": 7,
+      "realized_pnl": 0.3134,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0448,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0389,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.0777,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "coin_short": "SOL",
+      "limit_px": "80",
+      "hkt_hour": 23,
+      "n_settled": 6,
+      "realized_pnl": 0.2731,
+      "win_rate": 0.8333,
+      "avg_pnl": 0.0455,
+      "stable_green": false,
+      "stable_reason": "pos_days=0/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": -1.014,
+          "n": 1
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "85",
+      "hkt_hour": 20,
+      "n_settled": 9,
+      "realized_pnl": 0.4114,
+      "win_rate": 0.8889,
+      "avg_pnl": 0.0457,
+      "stable_green": false,
+      "stable_reason": "pos_days=0/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": -0.6789,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "83",
+      "hkt_hour": 10,
+      "n_settled": 8,
+      "realized_pnl": 0.3676,
+      "win_rate": 0.875,
+      "avg_pnl": 0.0459,
+      "stable_green": false,
+      "stable_reason": "pos_days=0/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": -0.819,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "coin_short": "SOL",
+      "limit_px": "95",
+      "hkt_hour": 11,
+      "n_settled": 7,
+      "realized_pnl": 0.3234,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0462,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0491,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.088,
+          "n": 2
+        }
+      ]
+    }
+  ],
+  "stable_green_cells": [
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "93",
+      "hkt_hour": 6,
+      "n_settled": 17,
+      "realized_pnl": 0.2642,
+      "win_rate": 0.9412,
+      "avg_pnl": 0.0155,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.3147,
+          "n": 4
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.141,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 13,
+      "realized_pnl": 0.2801,
+      "win_rate": 0.9231,
+      "avg_pnl": 0.0215,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.1159,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": 0.1852,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "88",
+      "hkt_hour": 8,
+      "n_settled": 10,
+      "realized_pnl": 0.293,
+      "win_rate": 0.9,
+      "avg_pnl": 0.0293,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.4092,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 14,
+      "realized_pnl": 0.4407,
+      "win_rate": 0.9286,
+      "avg_pnl": 0.0315,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/3 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.1159,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": -1.0084,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.2085,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "85",
+      "hkt_hour": 22,
+      "n_settled": 9,
+      "realized_pnl": 0.3182,
+      "win_rate": 0.8889,
+      "avg_pnl": 0.0354,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.153,
+          "n": 1
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "coin_short": "DOGE",
+      "limit_px": "88",
+      "hkt_hour": 8,
+      "n_settled": 12,
+      "realized_pnl": 0.4355,
+      "win_rate": 0.9167,
+      "avg_pnl": 0.0363,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.1159,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.2683,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 9,
+      "realized_pnl": 0.3841,
+      "win_rate": 0.8889,
+      "avg_pnl": 0.0427,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/3 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": -1.0105,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": 0.3586,
+          "n": 2
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.1929,
+          "n": 1
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "coin_short": "BTC",
+      "limit_px": "95",
+      "hkt_hour": 23,
+      "n_settled": 7,
+      "realized_pnl": 0.3031,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0433,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0389,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.0777,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 6,
+      "realized_pnl": 0.264,
+      "win_rate": 1.0,
+      "avg_pnl": 0.044,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.0983,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "95",
+      "hkt_hour": 2,
+      "n_settled": 7,
+      "realized_pnl": 0.3134,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0448,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0389,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.0777,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "coin_short": "SOL",
+      "limit_px": "95",
+      "hkt_hour": 11,
+      "n_settled": 7,
+      "realized_pnl": 0.3234,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0462,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0491,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.088,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "coin_short": "XRP",
+      "limit_px": "95",
+      "hkt_hour": 16,
+      "n_settled": 6,
+      "realized_pnl": 0.2848,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0475,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.088,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "coin_short": "HYPE",
+      "limit_px": "83",
+      "hkt_hour": 11,
+      "n_settled": 8,
+      "realized_pnl": 0.3805,
+      "win_rate": 0.875,
+      "avg_pnl": 0.0476,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 1.0077,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "coin_short": "BNB",
+      "limit_px": "83",
+      "hkt_hour": 10,
+      "n_settled": 8,
+      "realized_pnl": 0.3809,
+      "win_rate": 0.875,
+      "avg_pnl": 0.0476,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.3862,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "83",
+      "hkt_hour": 10,
+      "n_settled": 8,
+      "realized_pnl": 0.3812,
+      "win_rate": 0.875,
+      "avg_pnl": 0.0477,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.3862,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "coin_short": "DOGE",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 7,
+      "realized_pnl": 0.3341,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0477,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-26",
+          "pnl": 0.1374,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "coin_short": "SOL",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 10,
+      "realized_pnl": 0.482,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0482,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.088,
+          "n": 2
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": 0.1579,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "coin_short": "ETH",
+      "limit_px": "95",
+      "hkt_hour": 13,
+      "n_settled": 7,
+      "realized_pnl": 0.3446,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0492,
+      "stable_green": true,
+      "stable_reason": "pos_days=1/1 need>=1",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0983,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "coin_short": "BNB",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 8,
+      "realized_pnl": 0.394,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0492,
+      "stable_green": true,
+      "stable_reason": "pos_days=3/3 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.0389,
+          "n": 1
+        },
+        {
+          "date": "2026-10-27",
+          "pnl": 0.0389,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.1195,
+          "n": 2
+        }
+      ]
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "coin_short": "SOL",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 7,
+      "realized_pnl": 0.3449,
+      "win_rate": 1.0,
+      "avg_pnl": 0.0493,
+      "stable_green": true,
+      "stable_reason": "pos_days=2/2 need>=2",
+      "recent_day_pnls": [
+        {
+          "date": "2026-10-28",
+          "pnl": 0.0596,
+          "n": 1
+        },
+        {
+          "date": "2026-10-26",
+          "pnl": 0.0491,
+          "n": 1
+        }
+      ]
+    }
+  ],
+  "top_green_bands_coin_window": [
+    {
+      "coin": "BTC",
+      "window": "5m",
+      "realized_pnl": 52.8717,
+      "n_settled": 617
+    },
+    {
+      "coin": "ETH",
+      "window": "5m",
+      "realized_pnl": 57.9146,
+      "n_settled": 655
+    },
+    {
+      "coin": "SOL",
+      "window": "5m",
+      "realized_pnl": 39.9803,
+      "n_settled": 452
+    },
+    {
+      "coin": "DOGE",
+      "window": "5m",
+      "realized_pnl": 42.4318,
+      "n_settled": 434
+    },
+    {
+      "coin": "DOGE",
+      "window": "15m",
+      "realized_pnl": 33.4769,
+      "n_settled": 330
+    },
+    {
+      "coin": "SOL",
+      "window": "15m",
+      "realized_pnl": 55.3441,
+      "n_settled": 528
+    },
+    {
+      "coin": "ETH",
+      "window": "15m",
+      "realized_pnl": 50.8397,
+      "n_settled": 479
+    },
+    {
+      "coin": "XRP",
+      "window": "5m",
+      "realized_pnl": 52.0958,
+      "n_settled": 483
+    },
+    {
+      "coin": "BTC",
+      "window": "daily",
+      "realized_pnl": 1.0938,
+      "n_settled": 10
+    },
+    {
+      "coin": "BNB",
+      "window": "5m",
+      "realized_pnl": 53.4695,
+      "n_settled": 479
+    },
+    {
+      "coin": "HYPE",
+      "window": "5m",
+      "realized_pnl": 46.1457,
+      "n_settled": 409
+    },
+    {
+      "coin": "BTC",
+      "window": "15m",
+      "realized_pnl": 51.3543,
+      "n_settled": 439
+    }
+  ],
+  "top_green_bands_coin_limit_px": [
+    {
+      "coin": "DOGE",
+      "limit_px": "95",
+      "realized_pnl": 8.6266,
+      "n_settled": 157
+    },
+    {
+      "coin": "BNB",
+      "limit_px": "95",
+      "realized_pnl": 13.3755,
+      "n_settled": 243
+    },
+    {
+      "coin": "BTC",
+      "limit_px": "95",
+      "realized_pnl": 14.2644,
+      "n_settled": 258
+    },
+    {
+      "coin": "SOL",
+      "limit_px": "95",
+      "realized_pnl": 13.6811,
+      "n_settled": 247
+    },
+    {
+      "coin": "HYPE",
+      "limit_px": "95",
+      "realized_pnl": 6.2749,
+      "n_settled": 113
+    },
+    {
+      "coin": "XRP",
+      "limit_px": "95",
+      "realized_pnl": 11.4487,
+      "n_settled": 206
+    },
+    {
+      "coin": "ETH",
+      "limit_px": "95",
+      "realized_pnl": 16.9232,
+      "n_settled": 300
+    },
+    {
+      "coin": "BTC",
+      "limit_px": "93",
+      "realized_pnl": 19.3788,
+      "n_settled": 266
+    },
+    {
+      "coin": "HYPE",
+      "limit_px": "93",
+      "realized_pnl": 8.7074,
+      "n_settled": 117
+    },
+    {
+      "coin": "SOL",
+      "limit_px": "93",
+      "realized_pnl": 17.5662,
+      "n_settled": 233
+    },
+    {
+      "coin": "BNB",
+      "limit_px": "93",
+      "realized_pnl": 12.5728,
+      "n_settled": 166
+    },
+    {
+      "coin": "DOGE",
+      "limit_px": "93",
+      "realized_pnl": 11.2465,
+      "n_settled": 147
+    }
+  ],
+  "note": "Do NOT auto-add Wallet accounts from this list \u2014 discuss with user first. Rank = LIGHT green first (avg PnL$/fill ascending); dark/deep green is NOT preferred.",
+  "rank_rule": "light_green_first_avg_pnl_per_fill"
+}

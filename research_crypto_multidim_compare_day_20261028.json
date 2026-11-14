@@ -1,0 +1,3934 @@
+{
+  "generated_hkt": "2026-10-28 18:09:58",
+  "mode": "day",
+  "day": "20261028",
+  "axes": {
+    "outer_cols": "CRYPTO",
+    "outer_rows": "TIME_WINDOW",
+    "inner_x": "HKT_hour_0_23",
+    "inner_y": "limit_px_80_95c",
+    "metric": "realized_pnl_usd"
+  },
+  "n_files": 245,
+  "n_kept": 515,
+  "n_settled": 510,
+  "total_pnl": -7.4391,
+  "coins": [
+    "hyperliquid",
+    "dogecoin",
+    "bnb",
+    "solana",
+    "bitcoin",
+    "xrp",
+    "ethereum"
+  ],
+  "png": "research_crypto_multidim_compare_day_20261028.png",
+  "cells_nonzero": [
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": 0.5178,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "80",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.4879,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.4724,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": 0.4573,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 4,
+      "realized_pnl": 0.4411,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 1,
+      "n_settled": 2,
+      "realized_pnl": 0.4138,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.3862,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.3862,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.3459,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.3452,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.3452,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 3,
+      "realized_pnl": 0.3365,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.3323,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.3323,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 4,
+      "n_settled": 2,
+      "realized_pnl": 0.2933,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.281,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.281,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": 0.2807,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 2,
+      "realized_pnl": 0.2689,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.2683,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.2683,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.2683,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "80",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2667,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.2562,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "80",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bnb",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "dogecoin",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "80",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2511,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 3,
+      "realized_pnl": 0.2448,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": 0.2439,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 17,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.236,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 3,
+      "realized_pnl": 0.2333,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.2321,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.2318,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.2318,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.2318,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "83",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bnb",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2213,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.2206,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.2085,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "83",
+      "hkt_hour": 15,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "solana",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "83",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.2069,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": 0.1967,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 10,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 10,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "83",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "83",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "85",
+      "hkt_hour": 17,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "85",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "85",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "85",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "83",
+      "hkt_hour": 17,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1929,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 17,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bnb",
+      "limit_px": "83",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 10,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1793,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bnb",
+      "limit_px": "85",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.166,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "93",
+      "hkt_hour": 2,
+      "n_settled": 2,
+      "realized_pnl": 0.1627,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "85",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "88",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "85",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.153,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 4,
+      "n_settled": 2,
+      "realized_pnl": 0.1517,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 3,
+      "realized_pnl": 0.1481,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1403,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "88",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "90",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "88",
+      "hkt_hour": 10,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 10,
+      "n_settled": 1,
+      "realized_pnl": 0.128,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.1195,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.1195,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 2,
+      "realized_pnl": 0.1193,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 2,
+      "realized_pnl": 0.1193,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.1193,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": 0.1193,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "90",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "88",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1159,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 16,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.1041,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.0983,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "93",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "93",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "93",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "93",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bnb",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "93",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0926,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 2,
+      "realized_pnl": 0.088,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 2,
+      "realized_pnl": 0.088,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 12,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "93",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0814,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": 0.0777,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0725,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 7,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0704,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "93",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "4h",
+      "coin": "bitcoin",
+      "limit_px": "93",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0596,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": 0.0523,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": 0.0491,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0419,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "dogecoin",
+      "limit_px": "95",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 12,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "1h",
+      "coin": "solana",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "95",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": 0.0389,
+      "win_rate": 1.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": -0.748,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": -0.778,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": -0.792,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": -0.8043,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": -0.8312,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 2,
+      "realized_pnl": -0.8326,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": -0.8452,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 4,
+      "realized_pnl": -0.8552,
+      "win_rate": 0.75
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "85",
+      "hkt_hour": 2,
+      "n_settled": 2,
+      "realized_pnl": -0.8589,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 4,
+      "n_settled": 2,
+      "realized_pnl": -0.8589,
+      "win_rate": 0.5
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": -0.8681,
+      "win_rate": 0.5
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "90",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": -0.8911,
+      "win_rate": 0.5
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": -0.8939,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "88",
+      "hkt_hour": 6,
+      "n_settled": 2,
+      "realized_pnl": -0.8939,
+      "win_rate": 0.5
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": -0.9341,
+      "win_rate": 0.5
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": -0.9345,
+      "win_rate": 0.5
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "93",
+      "hkt_hour": 1,
+      "n_settled": 2,
+      "realized_pnl": -0.9467,
+      "win_rate": 0.5
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "95",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": -1.0028,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "95",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0035,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "93",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0049,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "bnb",
+      "limit_px": "95",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0049,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "xrp",
+      "limit_px": "88",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0077,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0077,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": -1.0078,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "88",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": -1.0084,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "90",
+      "hkt_hour": 3,
+      "n_settled": 1,
+      "realized_pnl": -1.0084,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "90",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0084,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "88",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0091,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0098,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0105,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0105,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0105,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "bnb",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0105,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0105,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0112,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": -1.0112,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0112,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0112,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "ethereum",
+      "limit_px": "85",
+      "hkt_hour": 14,
+      "n_settled": 1,
+      "realized_pnl": -1.0112,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0119,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "83",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": -1.0119,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0119,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0119,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "85",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0119,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "bitcoin",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": -1.0119,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0126,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0126,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "hyperliquid",
+      "limit_px": "83",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": -1.0126,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0133,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0133,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": -1.0133,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "xrp",
+      "limit_px": "83",
+      "hkt_hour": 4,
+      "n_settled": 1,
+      "realized_pnl": -1.0133,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0133,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "dogecoin",
+      "limit_px": "83",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.0133,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "bnb",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.014,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 6,
+      "n_settled": 1,
+      "realized_pnl": -1.014,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 9,
+      "n_settled": 1,
+      "realized_pnl": -1.014,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0147,
+      "win_rate": 0.0
+    },
+    {
+      "window": "4h",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0147,
+      "win_rate": 0.0
+    },
+    {
+      "window": "15m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 2,
+      "n_settled": 1,
+      "realized_pnl": -1.0154,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "bitcoin",
+      "limit_px": "80",
+      "hkt_hour": 1,
+      "n_settled": 1,
+      "realized_pnl": -1.0154,
+      "win_rate": 0.0
+    },
+    {
+      "window": "1h",
+      "coin": "ethereum",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 1,
+      "realized_pnl": -1.0154,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "solana",
+      "limit_px": "80",
+      "hkt_hour": 5,
+      "n_settled": 1,
+      "realized_pnl": -1.0154,
+      "win_rate": 0.0
+    },
+    {
+      "window": "5m",
+      "coin": "ethereum",
+      "limit_px": "83",
+      "hkt_hour": 5,
+      "n_settled": 3,
+      "realized_pnl": -1.8176,
+      "win_rate": 0.3333
+    },
+    {
+      "window": "15m",
+      "coin": "bitcoin",
+      "limit_px": "93",
+      "hkt_hour": 0,
+      "n_settled": 3,
+      "realized_pnl": -1.9509,
+      "win_rate": 0.3333
+    },
+    {
+      "window": "15m",
+      "coin": "xrp",
+      "limit_px": "80",
+      "hkt_hour": 0,
+      "n_settled": 2,
+      "realized_pnl": -2.0266,
+      "win_rate": 0.0
+    }
+  ]
+}
